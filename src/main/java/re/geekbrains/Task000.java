@@ -25,12 +25,13 @@ public class Task000 {
             try {
                 String result = scn.nextLine();
                 if (tryInt(result)) {
-                    throw new RuntimeException();
+                    throw new RuntimeException("Целочисленные значения запрещены!");
                 } else {
                     return Float.parseFloat(result);
                 }
             } catch (RuntimeException e) {
-                System.out.print("Ошибка ввода! Введите дробное число: ");
+                System.out.println(e.getMessage());
+                System.out.print("Введите дробное число: ");
             }
         }
     }
